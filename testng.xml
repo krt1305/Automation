@@ -1,0 +1,10 @@
+<suite name="SuiteName" parallel="tests">
+	<test name="Login Test">
+		<classes>
+			<class name="com.practo.testcases.Test1" />
+		</classes>
+	</test>
+	
+	
+</suite>
+
