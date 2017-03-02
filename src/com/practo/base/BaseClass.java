@@ -7,8 +7,17 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import com.practo.util.ExtentManager;
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+import junit.framework.Assert;
+
 public class BaseClass {
 	
+	public ExtentReports rep=ExtentManager.getInstance();
+	public ExtentTest test;
 	public WebDriver driver;
 	public Properties prop;
 	public void openBrowser(String browser)
@@ -17,7 +26,7 @@ public class BaseClass {
 		{
 			
 			driver=new FirefoxDriver();	
-			
+				
 		}
 		else if(browser.equals("Chrome"))
 		{
@@ -65,6 +74,24 @@ public class BaseClass {
 	/*******************************************Reporting********************************
 	 * 
 	 */
+	
+	
+	public void reportPass(String msg)
+	{
+		test.log(LogStatus.PASS, msg);
+	}
+	
+	public void reportFail(String msg)
+	{
+		test.log(LogStatus.FAIL, msg);
+		takesScreenShot();
+	
+	}
+	
+	public void takesScreenShot()
+	{
+		
+	}
 	
 	
 	
