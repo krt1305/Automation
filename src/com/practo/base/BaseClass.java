@@ -2,9 +2,12 @@ package com.practo.base;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import com.practo.util.ExtentManager;
@@ -54,8 +57,7 @@ public class BaseClass {
 		driver.get(url);
 	}
 	
-	
-	
+
 /*******************************************validations********************************
  * 
  */
@@ -94,6 +96,17 @@ public class BaseClass {
 	}
 	
 	
+	
+	public boolean isElementpresent(String xpath)
+	{
+		
+		List <WebElement> elem=driver.findElements(By.xpath(xpath));
+		if(elem.size() >0)
+			return true;
+		else
+		    return false;
+		
+	}
 	
 
 }

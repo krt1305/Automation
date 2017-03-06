@@ -37,5 +37,10 @@
 	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/selenium-java-3.1.0/lib/xercesImpl-2.11.0.jar"/>
 	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/selenium-java-3.1.0/lib/xml-apis-1.4.01.jar"/>
 	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/extentreports-2.40.2.jar"/>
+	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/poi/dom4j-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/poi/poi-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/poi/poi-ooxml-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/poi/poi-ooxml-schemas-3.6-20091214.jar"/>
+	<classpathentry kind="lib" path="/Users/rabiatabassum/Desktop/poi/xmlbeans-2.3.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
