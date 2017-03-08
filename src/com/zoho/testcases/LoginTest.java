@@ -1,26 +1,23 @@
-package com.practo.testcases;
+package com.zoho.testcases;
+
 import java.util.Hashtable;
 
 import org.testng.SkipException;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.practo.base.BaseClass;
 import com.practo.util.DataUtil;
-import com.practo.util.ExtentManager;
 import com.qtpselenium.hybrid.util.Xls_Reader;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 
-public class Test1 extends BaseClass{
-
-	String testCaseName="TestA";
+public class LoginTest {
+	
+	
+	String testCaseName="LoginTest";
+	SoftAssert softAssert;
 	Xls_Reader xls;
-			
+	
 	@Test(dataProvider="getData")
 	public void Test1(Hashtable <String,String> data)	
 	{
@@ -37,10 +34,18 @@ public class Test1 extends BaseClass{
 		}
 			
 	}
-	
 	@AfterMethod
 	public void quit()
 	{
+		
+		try
+		{
+			softAssert.assertAll();
+		}
+		catch(Error e)
+		{ 
+		
+		}
 		//rep.endTest(test);
 		//rep.flush();
 	}
@@ -51,4 +56,5 @@ public class Test1 extends BaseClass{
 		xls =new Xls_Reader("/Users/rabiatabassum/Desktop/testing.xlsx");
 		return DataUtil.getTestData(xls, testCaseName);
 	}	
+
 }
